@@ -1,5 +1,5 @@
 package week1;
-import stanford.Karel.*;
+//import stanford.Karel.*;
 
 public class OurKarelProgram {
 
