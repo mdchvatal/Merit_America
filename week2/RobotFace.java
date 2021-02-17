@@ -13,7 +13,6 @@ public class RobotFace extends GraphicsProgram {
     public static final int MOUTH_WIDTH = (HEAD_WIDTH / 4) *3;
     public static final int MOUTH_HEIGHT = HEAD_HEIGHT / 6;
 
-
     public void run() {
         createHead();
         createEyes();
