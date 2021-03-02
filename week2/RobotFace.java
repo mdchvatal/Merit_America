@@ -1,6 +1,12 @@
+/**
+ *A Simple program to print out a robot-style face to a grapihical window.
+ *There is an added interactivity whereby the program listens for mouse clicks
+ *and prints each element in the face per mouse click.
+*/
+
+
 package week2;
 
-import acm.graphics.GObject;
 import acm.graphics.GOval;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
@@ -8,6 +14,7 @@ import acm.program.GraphicsProgram;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 
+@SuppressWarnings("serial")
 public class RobotFace extends GraphicsProgram {
     public static final int HEAD_HEIGHT = 400;
     public static final int HEAD_WIDTH = 300;
@@ -15,7 +22,7 @@ public class RobotFace extends GraphicsProgram {
     public static final int MOUTH_WIDTH = (HEAD_WIDTH / 4) *3;
     public static final int MOUTH_HEIGHT = HEAD_HEIGHT / 6;
 
-    int click_counter = 0;
+    private int click_counter = 0;
 
     public void init() {
         addMouseListeners();
@@ -53,6 +60,7 @@ public class RobotFace extends GraphicsProgram {
     }
 
     private void addEyes(GOval leftEye, GOval rightEye) {
+        //TODO: Use doubles for better precision during math operations, then round back to ints.
         add(leftEye, ((((getWidth()-HEAD_WIDTH)/2)+(HEAD_WIDTH/4))-EYE_RADIUS),
                 (((getHeight()-HEAD_HEIGHT)/2)+(HEAD_HEIGHT/4))-EYE_RADIUS);
         add(rightEye, (((getWidth()-HEAD_WIDTH)/2)+((HEAD_WIDTH/4)*3)-EYE_RADIUS),
@@ -68,6 +76,7 @@ public class RobotFace extends GraphicsProgram {
 
     private void addMouth(GRect mouth) {
         add(mouth, ((((getWidth()-HEAD_WIDTH)/2)+((HEAD_WIDTH-mouth.getWidth())/2))),
+                //TODO: Change to doubles for better precision
                 ((getHeight()-HEAD_HEIGHT/2)+HEAD_HEIGHT*(3/4))+mouth.getHeight()/2);
     }
 }
