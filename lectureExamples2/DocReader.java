@@ -29,9 +29,8 @@ public class DocReader {
 		BufferedReader rd = null;
 		while (rd == null) {
 			try {
-				String name = console.readLine(prompt);
-				rd = new BufferedReader(new FileReader(name));
-			} catch (IOException ex) {
+				rd = new BufferedReader(new FileReader("/home/matt/IdeaProjects/Merit_America/week4/sample-text-file.txt"));
+			} catch (FileNotFoundException ex) {
 				System.out.println("Bad File Name or Path");
 			}
 		}
