@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>City List</name>
+			<type>1</type>
+			<location>/home/matt/IdeaProjects/Merit_America/week5/CityList</location>
+		</link>
+	</linkedResources>
 </projectDescription>
